@@ -27,6 +27,16 @@ public class Principal {
 		mazo.addCarta(carta2);
 		mazo.addCarta(carta3);
 		
+		Pocima pocima1 = new PocimaFortalecedora("Pocima Fortalecedora");
+		Pocima pocima2 = new PocimaFortalecedoraPlus("Pocima Fortalecedora Plus");
+		Pocima pocima3 = new PocimaKriptonita("Pocima Kriptonita");
+		Pocima pocima4 = new PocimaNumeroMagico("Pocima Numero Magico");
+		mazo.addPocima(pocima1);
+		mazo.addPocima(pocima2);
+		mazo.addPocima(pocima3);
+		mazo.addPocima(pocima4);
+		
+		
 		Jugador j1 = new Jugador ("jose");
 		Jugador j2 = new Jugador ("eduardo");
 		
@@ -34,7 +44,7 @@ public class Principal {
 		
 		mazo.repartirCartas(j1, j2);
 		baraja.agarrarCarta(j1, j2);
-		System.out.println("EL GANADOR ES " + baraja.setGanador() + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println("¡¡ EL GANADOR ES " + baraja.setGanador() + " !!");
 	}
 
 }

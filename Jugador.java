@@ -18,7 +18,7 @@ public class Jugador {
 	
 	@Override
 	public String toString () {
-		return nombre + " Cantidad de cartas: " + cartasJugador.size();
+		return nombre;
 	}
 	
 }

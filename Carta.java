@@ -11,6 +11,7 @@ public class Carta implements Comparable <Carta> {
 	public Carta(String nombre) {
 		this.nombre = nombre;
 		atributos = new ArrayList<>();
+		pocima = null;
 	}
 
 	public void addAtributo (Atributo atributo) {

@@ -3,8 +3,9 @@ package TPEspecialParte1;
 public class PocimaFortalecedora extends Pocima {
 
 	
-	public PocimaFortalecedora() {
+	public PocimaFortalecedora(String nombre) {
 		this.valor = 20.0;
+		this.nombre = nombre;
 	}
 	
 	@Override
@@ -16,4 +17,8 @@ public class PocimaFortalecedora extends Pocima {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return this.getNombre() + " (aumenta todos los atriubutos un 20%)";
+	}
 }

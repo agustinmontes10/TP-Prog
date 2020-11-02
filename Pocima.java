@@ -2,6 +2,7 @@ package TPEspecialParte1;
 
 public abstract class Pocima implements Comparable<Pocima> {
 
+	protected String nombre;
 	protected double valor;
 
 	public abstract void hacerEfecto(Carta carta);
@@ -19,6 +20,11 @@ public abstract class Pocima implements Comparable<Pocima> {
 		this.valor = valor;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	
 	
 	
 	

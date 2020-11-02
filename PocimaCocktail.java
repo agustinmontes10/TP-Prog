@@ -5,8 +5,8 @@ public class PocimaCocktail extends Pocima {
 	Pocima pocima1;
 	Pocima pocima2;
 	
-	public PocimaCocktail(double valor, Pocima pocima1, Pocima pocima2) {
-		this.valor = valor;
+	public PocimaCocktail(String nombre, Pocima pocima1, Pocima pocima2) {
+		this.nombre = nombre;
 		this.pocima1 = pocima1;
 		this.pocima2 = pocima2;
 	}

@@ -2,8 +2,9 @@ package TPEspecialParte1;
 
 public class PocimaQuieroValeCuatro extends Pocima {
 
-	public PocimaQuieroValeCuatro() {
+	public PocimaQuieroValeCuatro(String nombre) {
 		this.valor = 4.0;
+		this.nombre = nombre;
 	}
 	
 	@Override
@@ -16,6 +17,9 @@ public class PocimaQuieroValeCuatro extends Pocima {
 		
 	}
 
-	
+	@Override
+	public String toString() {
+		return this.getNombre() + " (todos los atributos pasan a tener el valor: 4)";
+	}
 
 }

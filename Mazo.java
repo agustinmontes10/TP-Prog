@@ -54,4 +54,8 @@ public class Mazo {
 		cartas.add(carta);
 	}
 	
+	public void addPocima (Pocima pocima) {
+		pocimas.add(pocima);
+	}
+	
 }

@@ -23,26 +23,43 @@ public class Juego {
 		for (int i = 1; i < MAXRONDAS; i++) {
 			if (j1.cartasJugador.size() > 0 && j2.cartasJugador.size() > 0) {
 				System.out.println("-------------------RONDA " + i + " ----------------------");
+				System.out.println(j1 + " (Cartas: " + j1.cartasJugador.size() + "). " + j2 + " (Cartas: " + j2.cartasJugador.size() + ").");
 				if (turno == j1) {
 					cartaJ1 = j1.cartasJugador.get(0);
 					random = (int) (Math.random()*cartaJ1.atributos.size());
 					atributo1 = cartaJ1.atributos.get(random);
 					
-					System.out.println("El jugador " + j1 + "------ eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
+					System.out.println("El jugador " + j1 + " eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
+					if(cartaJ1.getPocima() != null) {
+						System.out.println("    La carta " + cartaJ1.getNombre() + " cuenta con la pocima " + cartaJ1.getPocima());
+					}
+					
+					//----------------------JUEGA EL JUGADOR 2 ----------------------------
 					
 					cartaJ2 = j2.cartasJugador.get(0);
 					atributo2 = cartaJ2.atributos.get(random);
-					System.out.println("El jugador " + j2 + "------ eligio la carta " + cartaJ2.getNombre() + " y se le asigno el atributo " + atributo2.getNombre() + " con el valor: " + atributo2.getValor());
+					System.out.println("El jugador " + j2 + " eligio la carta " + cartaJ2.getNombre() + " y se le asigno el atributo " + atributo2.getNombre() + " con el valor: " + atributo2.getValor());
+					if(cartaJ2.getPocima() != null) {
+						System.out.println("    La carta " + cartaJ2.getNombre() + " cuenta con la pocima " + cartaJ2.getPocima());
+					}
 					turno = j2;
 				} else {
 					cartaJ2 = j2.cartasJugador.get(0);
 					random = (int) (Math.random()*cartaJ1.atributos.size());
 					atributo2 = cartaJ2.atributos.get(random);
-					System.out.println("El jugador " + j2 + "------ eligio la carta " + cartaJ2.getNombre() + " y se le asigno el atributo " + atributo2.getNombre() + " con el valor: " + atributo2.getValor());
-
+					System.out.println("El jugador " + j2 + " eligio la carta " + cartaJ2.getNombre() + " y se le asigno el atributo " + atributo2.getNombre() + " con el valor: " + atributo2.getValor());
+					if(cartaJ2.getPocima() != null) {
+						System.out.println("    La carta " + cartaJ2.getNombre() + " cuenta con la pocima " + cartaJ2.getPocima());
+					}
+					
+					//---------------------JUEGA EL JUGADOR 1-----------------------------
+					
 					cartaJ1 = j1.cartasJugador.get(0);
 					atributo1 = cartaJ1.atributos.get(random);
-					System.out.println("El jugador " + j1 + "------ eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
+					System.out.println("El jugador " + j1 + " eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
+					if(cartaJ1.getPocima() != null) {
+						System.out.println("    La carta " + cartaJ1.getNombre() + " cuenta con la pocima " + cartaJ1.getPocima());
+					}
 					turno = j1;
 				}
 				jugar(atributo1, atributo2);
@@ -60,7 +77,7 @@ public class Juego {
 			j1.cartasJugador.add(cartaJ2);
 			j2.cartasJugador.remove(0);
 			turno = j1;
-			System.out.println("Gano la ronda: " + j1 + ". Tiene " + j1.cartasJugador.size() + " cartas. " + j2 + " tiene " + j2.cartasJugador.size() + " cartas \n");
+			System.out.println("Gano la ronda: " + j1 + "(" + j1.cartasJugador.size() + "). " +  j2 + " (" + j2.cartasJugador.size() + ") \n");
 			
 		} else if (atributo1.getValor() == atributo2.getValor()){
 			j1.cartasJugador.remove(0);
@@ -74,7 +91,7 @@ public class Juego {
 			j2.cartasJugador.add(cartaJ2);
 			j1.cartasJugador.remove(0);
 			turno = j2;
-			System.out.println("Gano la ronda: " + j2 + ". Tiene " + j2.cartasJugador.size() + " cartas. " + j1 + " tiene " + j1.cartasJugador.size() + " cartas \n");
+			System.out.println("Gano la ronda: " + j2 + "(" + j2.cartasJugador.size() + "). " +  j1 + " (" + j1.cartasJugador.size() + ") \n");
 		}
 	}
 	

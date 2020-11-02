@@ -2,8 +2,9 @@ package TPEspecialParte1;
 
 public class PocimaNumeroMagico extends Pocima {
 
-	public PocimaNumeroMagico() {
+	public PocimaNumeroMagico(String nombre) {
 		this.valor = 23.0;
+		this.nombre = nombre;
 	}
 	
 	@Override
@@ -16,6 +17,9 @@ public class PocimaNumeroMagico extends Pocima {
 		
 	}
 
-	
+	@Override
+	public String toString() {
+		return this.getNombre() + " (todos los atributos pasan a tener el valor: 23)";
+	}
 
 }
