@@ -27,6 +27,7 @@ public class Juego {
 					cartaJ1 = j1.cartasJugador.get(0);
 					random = (int) (Math.random()*cartaJ1.atributos.size());
 					atributo1 = cartaJ1.atributos.get(random);
+					
 					System.out.println("El jugador " + j1 + "------ eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
 					
 					cartaJ2 = j2.cartasJugador.get(0);

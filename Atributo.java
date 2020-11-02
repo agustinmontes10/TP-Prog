@@ -18,6 +18,11 @@ public class Atributo {
 		return valor;
 	}
 
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	
 	
 	
 	

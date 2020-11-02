@@ -6,6 +6,7 @@ public class Carta implements Comparable <Carta> {
 
 	private String nombre;
 	ArrayList<Atributo> atributos;
+	private Pocima pocima;
 	
 	public Carta(String nombre) {
 		this.nombre = nombre;
@@ -15,11 +16,18 @@ public class Carta implements Comparable <Carta> {
 	public void addAtributo (Atributo atributo) {
 		atributos.add(atributo);
 	}
+	
+	public Pocima getPocima() {
+		return pocima;
+	}
+
+	public void setPocima(Pocima pocima) {
+		this.pocima = pocima;
+	}
 
 	@Override
 	public int compareTo(Carta o) {
-		//return (int) (this.getAltura() - o.atributos();
-		return 0;
+		return this.getNombre().compareTo(o.getNombre());
 	}
 
 	public String getNombre() {
