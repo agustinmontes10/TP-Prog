@@ -6,10 +6,12 @@ public class Jugador {
 
 	private String nombre;
 	ArrayList <Carta> cartasJugador;
+	private EstrategiaJuego estrategia;
 	
-	public Jugador (String nombre) {
+	public Jugador (String nombre, EstrategiaJuego estrategia) {
 		this.nombre = nombre;
 		cartasJugador = new ArrayList<>();
+		this.estrategia = estrategia;
 	}
 	
 	public void addCarta (Carta carta) {
@@ -20,5 +22,11 @@ public class Jugador {
 	public String toString () {
 		return nombre;
 	}
+
+	public EstrategiaJuego getEstrategia() {
+		return estrategia;
+	}
+	
+	
 	
 }

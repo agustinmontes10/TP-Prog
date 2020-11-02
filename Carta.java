@@ -35,7 +35,14 @@ public class Carta implements Comparable <Carta> {
 		return nombre;
 	}
 
-	
+	public Atributo obtenerAtributo(String nombre) {
+		for (Atributo atributo:atributos) {
+			if(atributo.getNombre().equals(nombre)) {
+				return atributo;
+			}
+		}
+		return null;
+	}
 	
 	
 	

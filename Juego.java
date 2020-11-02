@@ -18,47 +18,57 @@ public class Juego {
 		turno = j1;
 		Atributo atributo1 = null;
 		Atributo atributo2 = null;
-		int random;
 		
 		for (int i = 1; i < MAXRONDAS; i++) {
 			if (j1.cartasJugador.size() > 0 && j2.cartasJugador.size() > 0) {
 				System.out.println("-------------------RONDA " + i + " ----------------------");
 				System.out.println(j1 + " (Cartas: " + j1.cartasJugador.size() + "). " + j2 + " (Cartas: " + j2.cartasJugador.size() + ").");
+				//____________________________________TURNO JUGADOR 1_______________________________________________
 				if (turno == j1) {
 					cartaJ1 = j1.cartasJugador.get(0);
-					random = (int) (Math.random()*cartaJ1.atributos.size());
-					atributo1 = cartaJ1.atributos.get(random);
+					
+					atributo1 = j1.getEstrategia().funcion(j1);
 					
 					System.out.println("El jugador " + j1 + " eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
 					if(cartaJ1.getPocima() != null) {
 						System.out.println("    La carta " + cartaJ1.getNombre() + " cuenta con la pocima " + cartaJ1.getPocima());
+					}  else {
+						System.out.println("    La carta no cuenta con pocimas");
 					}
 					
 					//----------------------JUEGA EL JUGADOR 2 ----------------------------
 					
 					cartaJ2 = j2.cartasJugador.get(0);
-					atributo2 = cartaJ2.atributos.get(random);
+					atributo2 = cartaJ2.obtenerAtributo(atributo1.getNombre());
 					System.out.println("El jugador " + j2 + " eligio la carta " + cartaJ2.getNombre() + " y se le asigno el atributo " + atributo2.getNombre() + " con el valor: " + atributo2.getValor());
 					if(cartaJ2.getPocima() != null) {
 						System.out.println("    La carta " + cartaJ2.getNombre() + " cuenta con la pocima " + cartaJ2.getPocima());
+					} else {
+						System.out.println("    La carta no cuenta con pocimas");
 					}
 					turno = j2;
-				} else {
+				} 
+				//______________________________________TURNO JUGADOR 2_______________________________________________
+				else {
 					cartaJ2 = j2.cartasJugador.get(0);
-					random = (int) (Math.random()*cartaJ1.atributos.size());
-					atributo2 = cartaJ2.atributos.get(random);
+					
+					atributo2 = j2.getEstrategia().funcion(j2);
 					System.out.println("El jugador " + j2 + " eligio la carta " + cartaJ2.getNombre() + " y se le asigno el atributo " + atributo2.getNombre() + " con el valor: " + atributo2.getValor());
 					if(cartaJ2.getPocima() != null) {
 						System.out.println("    La carta " + cartaJ2.getNombre() + " cuenta con la pocima " + cartaJ2.getPocima());
+					} else {
+						System.out.println("    La carta no cuenta con pocimas");
 					}
 					
 					//---------------------JUEGA EL JUGADOR 1-----------------------------
 					
 					cartaJ1 = j1.cartasJugador.get(0);
-					atributo1 = cartaJ1.atributos.get(random);
+					atributo1 = cartaJ1.obtenerAtributo(atributo2.getNombre());
 					System.out.println("El jugador " + j1 + " eligio la carta " + cartaJ1.getNombre() + " y se le asigno el atributo " + atributo1.getNombre() + " con el valor: " + atributo1.getValor());
 					if(cartaJ1.getPocima() != null) {
 						System.out.println("    La carta " + cartaJ1.getNombre() + " cuenta con la pocima " + cartaJ1.getPocima());
+					} else {
+						System.out.println("    La carta no cuenta con pocimas");
 					}
 					turno = j1;
 				}

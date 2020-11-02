@@ -36,9 +36,12 @@ public class Principal {
 		mazo.addPocima(pocima3);
 		mazo.addPocima(pocima4);
 		
+		EstrategiaJuego timbero = new EstrategiaTimbero();
+		EstrategiaJuego ambicioso = new EstrategiaAmbicioso();
+		EstrategiaJuego obstinado = new EstrategiaObstinado("Fuerza");
 		
-		Jugador j1 = new Jugador ("jose");
-		Jugador j2 = new Jugador ("eduardo");
+		Jugador j1 = new Jugador ("Jose", timbero);
+		Jugador j2 = new Jugador ("Eduardo", ambicioso);
 		
 		Juego baraja = new Juego(j1, j2);
 		

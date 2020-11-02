@@ -15,7 +15,6 @@ public class PocimaCocktail extends Pocima {
 	public void hacerEfecto(Carta carta) {
 		pocima1.hacerEfecto(carta);
 		pocima2.hacerEfecto(carta);
-		
 	}
 
 	

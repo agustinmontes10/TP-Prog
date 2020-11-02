@@ -1,6 +1,8 @@
 package TPEspecialParte1;
 
-public class Atributo {
+import java.util.Comparator;
+
+public class Atributo implements Comparable<Atributo>{
 
 	private String nombre;
 	private double valor;
@@ -21,6 +23,15 @@ public class Atributo {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+
+	@Override
+	public int compareTo(Atributo o) {
+		return (int) (this.getValor() - o.getValor());
+	}
+
+	
+
+	
 
 	
 	
