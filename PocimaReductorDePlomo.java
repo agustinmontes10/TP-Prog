@@ -2,8 +2,8 @@ package TPEspecialParte1;
 
 public class PocimaReductorDePlomo extends Pocima {
 
-	public PocimaReductorDePlomo(String nombre) {
-		this.valor = 55.0;
+	public PocimaReductorDePlomo(String nombre, double valor) {
+		this.valor = valor;
 		this.nombre = nombre;
 	}
 	
@@ -18,7 +18,7 @@ public class PocimaReductorDePlomo extends Pocima {
 
 	@Override
 	public String toString() {
-		return this.getNombre() + " (disminuye todos los atriubutos un 55%)";
+		return this.getNombre() + " (disminuye todos los atriubutos un " + valor + "%)";
 	}
 
 }

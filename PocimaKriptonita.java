@@ -2,8 +2,8 @@ package TPEspecialParte1;
 
 public class PocimaKriptonita extends Pocima {
 
-	public PocimaKriptonita (String nombre) {
-		this.valor = 25.0;
+	public PocimaKriptonita (String nombre, double valor) {
+		this.valor = valor;
 		this.nombre = nombre;
 	}
 	
@@ -19,7 +19,7 @@ public class PocimaKriptonita extends Pocima {
 
 	@Override
 	public String toString() {
-		return this.getNombre() + " (disminuye todos los atriubutos un 25%)";
+		return this.getNombre() + " (disminuye todos los atriubutos un " + valor + "%)";
 	}
 
 }

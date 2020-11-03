@@ -17,5 +17,8 @@ public class PocimaCocktail extends Pocima {
 		pocima2.hacerEfecto(carta);
 	}
 
+	public String toString() {
+		return this.getNombre() + " (es una mezcla entre " + pocima1.getNombre() + " y " + pocima2.getNombre() + ")";
+	}
 	
 }

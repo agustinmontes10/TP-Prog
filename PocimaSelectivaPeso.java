@@ -2,8 +2,8 @@ package TPEspecialParte1;
 
 public class PocimaSelectivaPeso extends Pocima {
 
-	public PocimaSelectivaPeso (String nombre) {
-		this.valor = 43.0;
+	public PocimaSelectivaPeso (String nombre, double valor) {
+		this.valor = valor;
 		this.nombre = nombre;
 	}
 	
@@ -23,7 +23,7 @@ public class PocimaSelectivaPeso extends Pocima {
 
 	@Override
 	public String toString() {
-		return this.getNombre() + " (aumenta el atributo peso en un 43%)";
+		return this.getNombre() + " (aumenta el atributo peso en un " + valor + "%)";
 	}
 	
 }
